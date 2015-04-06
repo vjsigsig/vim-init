@@ -265,6 +265,8 @@ i_<Plug>(unite_exit)	unite.txt	/*i_<Plug>(unite_exit)*
 i_<Plug>(unite_input_directory)	unite.txt	/*i_<Plug>(unite_input_directory)*
 i_<Plug>(unite_insert_leave)	unite.txt	/*i_<Plug>(unite_insert_leave)*
 i_<Plug>(unite_move_head)	unite.txt	/*i_<Plug>(unite_move_head)*
+i_<Plug>(unite_move_left)	unite.txt	/*i_<Plug>(unite_move_left)*
+i_<Plug>(unite_move_right)	unite.txt	/*i_<Plug>(unite_move_right)*
 i_<Plug>(unite_narrowing_input_history)	unite.txt	/*i_<Plug>(unite_narrowing_input_history)*
 i_<Plug>(unite_narrowing_path)	unite.txt	/*i_<Plug>(unite_narrowing_path)*
 i_<Plug>(unite_new_candidate)	unite.txt	/*i_<Plug>(unite_new_candidate)*
@@ -419,6 +421,7 @@ unite-action-common	unite.txt	/*unite-action-common*
 unite-action-completion	unite.txt	/*unite-action-completion*
 unite-action-directory	unite.txt	/*unite-action-directory*
 unite-action-file	unite.txt	/*unite-action-file*
+unite-action-history/unite	unite.txt	/*unite-action-history\/unite*
 unite-action-jump_list	unite.txt	/*unite-action-jump_list*
 unite-action-neobundle-lazy	neobundle.txt	/*unite-action-neobundle-lazy*
 unite-action-neobundle-search	neobundle.txt	/*unite-action-neobundle-search*
@@ -631,6 +634,7 @@ unite-source-file_rec/git	unite.txt	/*unite-source-file_rec\/git*
 unite-source-find	unite.txt	/*unite-source-find*
 unite-source-function	unite.txt	/*unite-source-function*
 unite-source-grep	unite.txt	/*unite-source-grep*
+unite-source-history/unite	unite.txt	/*unite-source-history\/unite*
 unite-source-history/yank	unite.txt	/*unite-source-history\/yank*
 unite-source-jump	unite.txt	/*unite-source-jump*
 unite-source-jump_point	unite.txt	/*unite-source-jump_point*
@@ -640,6 +644,8 @@ unite-source-mapping	unite.txt	/*unite-source-mapping*
 unite-source-menu	unite.txt	/*unite-source-menu*
 unite-source-output	unite.txt	/*unite-source-output*
 unite-source-process	unite.txt	/*unite-source-process*
+unite-source-rec	unite.txt	/*unite-source-rec*
+unite-source-rec/async	unite.txt	/*unite-source-rec\/async*
 unite-source-register	unite.txt	/*unite-source-register*
 unite-source-runtimepath	unite.txt	/*unite-source-runtimepath*
 unite-source-script	unite.txt	/*unite-source-script*

@@ -34,9 +34,6 @@ set listchars=tab:\|\-,trail:~
 command NT NERDTree
 
 " colorscheme
-colorscheme jellybeans
-let g:jellybeans_use_lowcolor_black = 0
-set t_Co=256
 
 " other
 syntax on
@@ -77,5 +74,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'altercation/vim-colors-solarized'
+
+NeoBundleCheck
 
 filetype plugin indent on
