@@ -34,6 +34,7 @@ set listchars=tab:\|\-,trail:~
 command NT NERDTree
 
 " colorscheme
+set bg=dark
 
 " other
 syntax on
@@ -74,6 +75,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'nanotech/jellybeans.vim'
 
 NeoBundleCheck
 
