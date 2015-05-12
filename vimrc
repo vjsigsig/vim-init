@@ -87,7 +87,8 @@ augroup END
 call SpaceBg()
 
 " NERDTree
-let g:NERDTreeShowBookmarks = 1
+let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
 
 "[NeoBundle]"{{
 	filetype off
