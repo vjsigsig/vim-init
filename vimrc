@@ -107,7 +107,7 @@ let NERDTreeShowHidden=1
 	NeoBundle 'altercation/vim-colors-solarized'
 	NeoBundle 'nanotech/jellybeans.vim'
 	NeoBundle 'scrooloose/syntastic'
-	NeoBundle 'joonty/vdebug'
+	"NeoBundle 'joonty/vdebug'
 
 	NeoBundleCheck
 
@@ -122,6 +122,17 @@ let NERDTreeShowHidden=1
 	set t_Co=256
 "}}
 
+if !has('gui_running')
+	augroup seiya
+		autocmd!
+		autocmd VimEnter,ColorScheme * highlight Normal ctermbg=none
+		autocmd VimEnter,ColorScheme * highlight LineNr ctermbg=none
+		autocmd VimEnter,ColorScheme * highlight SignColumn ctermbg=none
+		autocmd VimEnter,ColorScheme * highlight VertSplit ctermbg=none
+		autocmd VimEnter,ColorScheme * highlight NonText ctermbg=none
+		autocmd VimEnter,ColorScheme * highlight SpecialKey ctermbg=none ctermfg=255
+	augroup END
+endif
 
 " let g:syntastic_check_on_open = 1
 " let g:syntastic_enable_signs = 1
