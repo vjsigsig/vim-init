@@ -107,6 +107,7 @@ let NERDTreeShowHidden=1
 	NeoBundle 'altercation/vim-colors-solarized'
 	NeoBundle 'nanotech/jellybeans.vim'
 	NeoBundle 'scrooloose/syntastic'
+	NeoBundle 'itchyny/lightline.vim'
 	"NeoBundle 'joonty/vdebug'
 
 	NeoBundleCheck
@@ -120,6 +121,12 @@ let NERDTreeShowHidden=1
 	colorscheme jellybeans
 	set bg=dark
 	set t_Co=256
+
+	"[lightline]{{
+		let g:lightline = {
+			\ 'colorscheme': 'jerrybeans'
+		\}
+	"}}
 "}}
 
 if !has('gui_running')
