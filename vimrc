@@ -108,6 +108,7 @@ let NERDTreeShowHidden=1
 	NeoBundle 'nanotech/jellybeans.vim'
 	NeoBundle 'scrooloose/syntastic'
 	NeoBundle 'itchyny/lightline.vim'
+	NeoBundle 'tpope/vim-fugitive'
 	"NeoBundle 'joonty/vdebug'
 
 	NeoBundleCheck
@@ -137,7 +138,7 @@ if !has('gui_running')
 		autocmd VimEnter,ColorScheme * highlight SignColumn ctermbg=none
 		autocmd VimEnter,ColorScheme * highlight VertSplit ctermbg=none
 		autocmd VimEnter,ColorScheme * highlight NonText ctermbg=none
-		autocmd VimEnter,ColorScheme * highlight SpecialKey ctermbg=none ctermfg=255
+		autocmd VimEnter,ColorScheme * highlight SpecialKey ctermbg=none ctermfg=245
 	augroup END
 endif
 
