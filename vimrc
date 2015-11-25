@@ -109,8 +109,10 @@ let NERDTreeShowHidden=1
 	NeoBundle 'scrooloose/syntastic'
 	NeoBundle 'itchyny/lightline.vim'
 	NeoBundle 'tpope/vim-fugitive'
-	NeoBundle 'editorconfig/editorconfig-vim'
+	"NeoBundle 'editorconfig/editorconfig-vim'
 	"NeoBundle 'joonty/vdebug'
+	NeoBundle 'Shougo/vimshell'
+	NeoBundle 'Shougo/vimproc'
 
 	NeoBundleCheck
 
