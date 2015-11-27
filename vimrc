@@ -58,6 +58,8 @@
 		set backspace=start,eol,indent
 		"listで表示される文字のフォーマットを定義する
 		set listchars=tab:\|\-,trail:~
+		"Unicodeエンコードで東アジア圏の文字キャラクターを使う用にする
+		set ambiwidth=double
 		"マウスを有効にするモードを設定
 		"set mount=i
 	"}}
@@ -106,7 +108,6 @@ let NERDTreeShowHidden=1
 	NeoBundle 'scrooloose/nerdtree'
 	NeoBundle 'altercation/vim-colors-solarized'
 	NeoBundle 'nanotech/jellybeans.vim'
-	NeoBundle 'scrooloose/syntastic'
 	NeoBundle 'itchyny/lightline.vim'
 	NeoBundle 'tpope/vim-fugitive'
 	"NeoBundle 'editorconfig/editorconfig-vim'
@@ -144,14 +145,3 @@ if !has('gui_running')
 		autocmd VimEnter,ColorScheme * highlight SpecialKey ctermbg=none ctermfg=245
 	augroup END
 endif
-
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_enable_signs = 1
-" let g:syntastic_echo_current_error = 1
-" let g:syntastic_auto_loc_list = 2
-" let g:syntastic_enable_highlighting = 1
-" " なんでか分からないけど php コマンドのオプションを上書かないと動かなかった
-" let g:syntastic_php_php_args = '-l'
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
