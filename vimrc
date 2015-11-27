@@ -67,6 +67,7 @@
 
 "[alias]"{{
 	command NT NERDTree
+	command ST SyntasticToggle
 "}}
 
 " other
@@ -108,6 +109,7 @@ let NERDTreeShowHidden=1
 	NeoBundle 'scrooloose/nerdtree'
 	NeoBundle 'altercation/vim-colors-solarized'
 	NeoBundle 'nanotech/jellybeans.vim'
+	NeoBundle 'scrooloose/syntastic.git'
 	NeoBundle 'itchyny/lightline.vim'
 	NeoBundle 'tpope/vim-fugitive'
 	"NeoBundle 'editorconfig/editorconfig-vim'
@@ -145,3 +147,30 @@ if !has('gui_running')
 		autocmd VimEnter,ColorScheme * highlight SpecialKey ctermbg=none ctermfg=245
 	augroup END
 endif
+
+"":SyntasticToggleで切り替え
+autocmd! VimEnter * SyntasticToggle
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"PHPで使う構文チェッカ
+let g:syntastic_php_checkers = ['php', 'phpmd', 'phpcs']
+let g:syntasitc_enable_signs = 1
+
+"Vimを起動したディレクトリにあるruleset.xmlを見にいく
+let g:syntastic_php_phpcs_args = '--standard=ruleset.xml'
+"let g:syntastic_php_phpmd_post_args = 'phpmd_ruleset.xml'
+
+"ファイルを開いたときにチェックする
+"falseだと保存したときにチェックされる
+let g:syntastic_check_on_open = 1
+let g:syntastic_ignore_files = ['\.ctp$']
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 2
+let g:syntastic_check_on_wq = 0
+let g:syntastic_echo_current_error = 1
+let g:syntastic_enable_highlighting = 1
+let g:syntastic_error_symbol = '?'
+let g:syntastic_warning_symbol = '!'
