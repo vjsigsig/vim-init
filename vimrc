@@ -59,7 +59,7 @@
 		"listで表示される文字のフォーマットを定義する
 		set listchars=tab:\|\-,trail:~
 		"Unicodeエンコードで東アジア圏の文字キャラクターを使う用にする
-		set ambiwidth=double
+		"set ambiwidth=double
 		"マウスを有効にするモードを設定
 		"set mount=i
 	"}}
@@ -112,8 +112,9 @@ let NERDTreeShowHidden=1
 	NeoBundle 'tpope/vim-fugitive'
 	"NeoBundle 'editorconfig/editorconfig-vim'
 	"NeoBundle 'joonty/vdebug'
-	NeoBundle 'Shougo/vimshell'
-	NeoBundle 'Shougo/vimproc'
+	"NeoBundle 'Shougo/vimshell'
+	"NeoBundle 'Shougo/vimproc'
+	NeoBundle 'surround.vim'
 
 	NeoBundleCheck
 
@@ -126,12 +127,6 @@ let NERDTreeShowHidden=1
 	colorscheme jellybeans
 	set bg=dark
 	set t_Co=256
-
-	"[lightline]{{
-		let g:lightline = {
-			\ 'colorscheme': 'jerrybeans'
-		\}
-	"}}
 "}}
 
 if !has('gui_running')
