@@ -115,6 +115,9 @@ let NERDTreeShowHidden=1
 	"NeoBundle 'Shougo/vimshell'
 	"NeoBundle 'Shougo/vimproc'
 	NeoBundle 'surround.vim'
+	NeoBundle 'plasticboy/vim-markdown'
+	NeoBundle 'kannokanno/previm'
+	NeoBundle 'tyru/open-browser.vim'
 
 	NeoBundleCheck
 
