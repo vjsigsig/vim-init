@@ -59,7 +59,7 @@
 		"listで表示される文字のフォーマットを定義する
 		set listchars=tab:\|\-,trail:~
 		"Unicodeエンコードで東アジア圏の文字キャラクターを使う用にする
-		"set ambiwidth=double
+		set ambiwidth=double
 		"マウスを有効にするモードを設定
 		"set mount=i
 	"}}
@@ -130,6 +130,10 @@ let NERDTreeShowHidden=1
 	colorscheme jellybeans
 	set bg=dark
 	set t_Co=256
+"}}
+
+"[マークダウン]"{{
+	au BufRead,BufNewFile *.md set filetype=markdown
 "}}
 
 if !has('gui_running')
