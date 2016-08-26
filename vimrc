@@ -137,6 +137,18 @@ let NERDTreeShowHidden=1
 	au BufRead,BufNewFile *.md set filetype=markdown
 "}}
 
+"[現在開いているファイルを実行 (only php|ruby|go)]"{{
+function! ExecuteCurrentFile()
+	if &filetype == 'php' || &filetype == 'ruby'
+		exe '!' . &filetype . ' %'
+	endif
+	if &filetype == 'go'
+		exe '!go run *.go'
+	endif
+endfunction
+nnoremap <Space> :call ExecuteCurrentFile()<CR>
+"}}
+
 if !has('gui_running')
 	augroup seiya
 		autocmd!
