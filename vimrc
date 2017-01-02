@@ -145,8 +145,11 @@ function! ExecuteCurrentFile()
 	if &filetype == 'go'
 		exe '!go run *.go'
 	endif
+	if &filetype == 'sh'
+		exe '!./%'
+	endif
 endfunction
-nnoremap <Space> :call ExecuteCurrentFile()<CR>
+nnoremap <F5> :call ExecuteCurrentFile()<ENTER>
 "}}
 
 if !has('gui_running')
