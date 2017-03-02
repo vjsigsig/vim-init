@@ -135,6 +135,7 @@ let NERDTreeShowHidden=1
 
 "[マークダウン]"{{
 	au BufRead,BufNewFile *.md set filetype=markdown
+	let g:vim_markdown_folding_disabled = 1
 "}}
 
 "[現在開いているファイルを実行 (only php|ruby|go)]"{{
