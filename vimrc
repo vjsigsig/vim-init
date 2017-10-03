@@ -119,6 +119,7 @@ let NERDTreeShowHidden=1
 	NeoBundle 'kannokanno/previm'
 	NeoBundle 'tyru/open-browser.vim'
 	NeoBundle "ctrlpvim/ctrlp.vim"
+	NeoBundle 'mrk21/yaml-vim'
 
 	NeoBundleCheck
 
