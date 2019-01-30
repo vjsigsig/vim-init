@@ -69,13 +69,10 @@
 	command NT NERDTree
 "}}
 
-" other
-syntax on
-
-"[PHP check syntax error]"{{
-	autocmd FileType php set makeprg=php\ -l\ %
-	autocmd BufWritePost *.php silent make | if len(getqflist()) != 1 | copen | else | cclose | endif | redraw!
-"}}
+""[PHP check syntax error]"{{
+"	autocmd FileType php set makeprg=php\ -l\ %
+"	autocmd BufWritePost *.php silent make | if len(getqflist()) != 1 | copen | else | cclose | endif | redraw!
+""}}
 
 " colored row-last Spaces or Tabs
 function! SpaceBg()
@@ -91,48 +88,6 @@ call SpaceBg()
 " NERDTree
 let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
-
-"[NeoBundle]"{{
-	filetype off
-
-	if has('vim_starting')
-		set runtimepath+=~/.vim/bundle/neobundle.vim
-	endif
-
-	call neobundle#begin(expand('~/.vim/bundle/'))
-
-	NeoBundleFetch 'Shougo/neobundle.vim'
-
-	NeoBundle 'Shougo/unite.vim'
-	NeoBundle 'ujihisa/unite-colorscheme'
-	NeoBundle 'scrooloose/nerdtree'
-	NeoBundle 'altercation/vim-colors-solarized'
-	NeoBundle 'nanotech/jellybeans.vim'
-	NeoBundle 'itchyny/lightline.vim'
-	NeoBundle 'tpope/vim-fugitive'
-	NeoBundle 'editorconfig/editorconfig-vim'
-	"NeoBundle 'joonty/vdebug'
-	"NeoBundle 'Shougo/vimshell'
-	"NeoBundle 'Shougo/vimproc'
-	NeoBundle 'surround.vim'
-	NeoBundle 'plasticboy/vim-markdown'
-	NeoBundle 'kannokanno/previm'
-	NeoBundle 'tyru/open-browser.vim'
-	NeoBundle "ctrlpvim/ctrlp.vim"
-	NeoBundle 'mrk21/yaml-vim'
-
-	NeoBundleCheck
-
-	filetype plugin indent on
-
-	call neobundle#end()
-"}}
-
-"[カラースキーム]"{{
-	colorscheme jellybeans
-	set bg=dark
-	set t_Co=256
-"}}
 
 "[マークダウン]"{{
 	au BufRead,BufNewFile *.md set filetype=markdown
@@ -165,3 +120,73 @@ if !has('gui_running')
 		autocmd VimEnter,ColorScheme * highlight SpecialKey ctermbg=none ctermfg=245
 	augroup END
 endif
+
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/home/vjsigsig/.cache/dein//repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state('/home/vjsigsig/.cache/dein/')
+  call dein#begin('/home/vjsigsig/.cache/dein/')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('/home/vjsigsig/.cache/dein//repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here like this:
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('ujihisa/unite-colorscheme')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('nanotech/jellybeans.vim')
+  call dein#add('tomasr/molokai')
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('editorconfig/editorconfig-vim')
+  call dein#add('vim-scripts/surround.vim')
+  call dein#add('plasticboy/vim-markdown')
+  call dein#add('kannokanno/previm')
+  call dein#add('tyru/open-browser.vim')
+  call dein#add("ctrlpvim/ctrlp.vim")
+  call dein#add('mrk21/yaml-vim')
+  call dein#add('vim-syntastic/syntastic')
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
+
+"[syntastic]"{{
+execute pathogen#infect()
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"}}
+
+"[カラースキーム]"{{
+	colorscheme molokai
+	highlight Normal ctermbg=none
+	syntax on
+"}}
