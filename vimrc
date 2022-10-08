@@ -3,7 +3,7 @@
 		"vi互換無効
 		set nocompatible
 		"<Tab>入力でスペース無効
-		set noexpandtab
+		"set noexpandtab
 		"高度インデント無効
 		set nosmartindent
 
@@ -30,6 +30,10 @@
 		set list
 		"カーソルが何行目の何列目に存在しているかをステータスラインに表示
 		set ruler
+		"<Tab>入力でスペース有効
+		set tabstop=4
+		set expandtab
+		set shiftwidth=4
 	"}}
 
 	"[set VAL]"{{
