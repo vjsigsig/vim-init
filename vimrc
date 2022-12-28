@@ -34,6 +34,8 @@
 		set tabstop=4
 		set expandtab
 		set shiftwidth=4
+		"ビープ音消去
+		set belloff=all
 	"}}
 
 	"[set VAL]"{{
